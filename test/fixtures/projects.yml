@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  description: MyString
+  active: false
+  archived: false
+  notes: MyString
+  modified_by: 1
+  created_by: 1
+
+two:
+  name: MyString
+  description: MyString
+  active: false
+  archived: false
+  notes: MyString
+  modified_by: 1
+  created_by: 1
