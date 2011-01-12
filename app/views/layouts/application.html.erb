@@ -2,13 +2,60 @@
 <html>
 <head>
   <title>Epiworx Rails</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+  <%= stylesheet_link_tag "reset" %>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "jquery-1.4.4.min" %>
+  <%= javascript_include_tag "jquery.form" %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
+  <div class="page">
+      <div id="header">
+          <div id="title">
+              <h1>
+                  <%= link_to "Epiworx", root_path %></h1>
+              <p>
+                  The simple to setup and use open source task management software</p>
+          </div>
+          <div class="pretty-box">
+          </div>
+          ProfileUserControl partial
+          MenuUserControl partial
+      </div>
+      NavigationUserControl partial
+      <div id="main">
+          <div class="pretty-box">
+          </div>
+          <table style="width: 100%;">
+              <tr>
+                  <td id="body">
+                      <%= yield %>
+                  </td>
+                  <td id="sidebar">
+                      yield a sidebar?
+                  </td>
+              </tr>
+          </table>
+          <div class="clear">
+          </div>
+      </div>
+      <div class="clear">
+      </div>
+      <div id="footer">
+          <h5>
+              Epiworx</h5>
+          <ul>
+              <li>
+                  <%= link_to "Home", root_path %></li>
+              <li class="separator">|</li>
+              <li>
+                link to About</li>
+              <li class="separator">|</li>
+              <li><a href="http://www.opensource.org/licenses/mit-license.php">Licensing</a></li>
+          </ul>
+          <strong>Copyright 2011.</strong>
+      </div>
+  </div>
 
 </body>
 </html>
