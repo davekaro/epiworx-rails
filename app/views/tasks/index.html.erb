@@ -32,7 +32,7 @@
     <td><%= link_to task.id, edit_task_path(task) %></td>
     <td><div class="box" style="color: #FFFFFF; background-color: #4FA72A;"><%= task.status %></div></td>
     <td><%= task.project.name %></td>
-    <td><%= task.description %></td>
+    <td><p title="<%= task.description%>"><%= task.description %></p></td>
     <td><%= task.assignedTo %></td>
     <td><%= task.estimatedCompletionDate %></td>
 <!--
