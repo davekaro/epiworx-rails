@@ -10,65 +10,59 @@
 </head>
 <body>
   <div class="page">
-      <div id="header">
-          <div id="title">
-              <h1>
-                  <%= link_to "Epiworx", root_path %></h1>
-              <p>
-                  The simple to setup and use open source task management software</p>
-          </div>
-          <div class="pretty-box">
-          </div>
-          ProfileUserControl partial
-          MenuUserControl partial
+    <div id="header">
+      <div id="title">
+        <h1><%= link_to "Epiworx", root_path %></h1>
+        
+        <p>The simple to setup and use open source task management software</p>
       </div>
       
-      <%= render "shared/navigation" %>
+      <div class="pretty-box"></div>
+      ProfileUserControl partial
+      MenuUserControl partial
+    </div>
+    
+    <%= render "shared/navigation" %>
+    
+    <div id="main">
+      <div class="pretty-box"></div>
       
-      <div id="main">
-          <div class="pretty-box">
-          </div>
-          <table style="width: 100%;">
-              <tr>
-                  <td id="body">
-                      <%= yield %>
-                  </td>
-                  <td id="sidebar">
-    				<div class="part">
-				        <h4>
-				            Things To Do</h4>
-				        <ul>
-				            <li class="first">
-				                <a href="/Hour/Create">Add a New Hour</a></li>
-				            <li>
-				                <%= link_to "Add a New Task", new_task_path %></li>
-				            <li class="last">
-				                <%= link_to "Add a New Project", new_project_path %></li>
-				        </ul>
-				    </div>
-
-                  </td>
-              </tr>
-          </table>
-          <div class="clear">
-          </div>
-      </div>
-      <div class="clear">
-      </div>
-      <div id="footer">
-          <h5>
-              Epiworx</h5>
-          <ul>
-              <li>
-                  <%= link_to "Home", root_path %></li>
-              <li class="separator">|</li>
-              <li>
-                <%= link_to "About", about_path %></li>
-              <li class="separator">|</li>
-              <li><a href="http://www.opensource.org/licenses/mit-license.php">Licensing</a></li>
-          </ul>
-          <strong>Copyright 2011.</strong>
-      </div>
+      <table style="width: 100%;">
+        <tr>
+          <td id="body">
+            <%= yield %>
+          </td>
+          <td id="sidebar">
+            <div class="part">
+              <h4>
+                Things To Do</h4>
+              <ul>
+                <li class="first"><a href="/Hour/Create">Add a New Hour</a></li>
+                <li><%= link_to "Add a New Task", new_task_path %></li>
+                <li class="last"><%= link_to "Add a New Project", new_project_path %></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </table>
+      
+      <div class="clear"></div>
+    
+    </div>
+    
+    <div class="clear"></div>
+    
+    <div id="footer">
+      <h5>Epiworx</h5>
+      <ul>
+        <li><%= link_to "Home", root_path %></li>
+        <li class="separator">|</li>
+        <li><%= link_to "About", about_path %></li>
+        <li class="separator">|</li>
+        <li><a href="http://www.opensource.org/licenses/mit-license.php">Licensing</a></li>
+      </ul>
+      <strong>Copyright 2011.</strong>
+    </div>
   </div>
 
 </body>
