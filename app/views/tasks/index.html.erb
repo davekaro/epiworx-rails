@@ -34,7 +34,7 @@
     <td><%= task.project.name %></td>
     <td><p title="<%= task.description%>"><%= task.description %></p></td>
     <td><%= task.assignedTo %></td>
-    <td><%= task.estimatedCompletionDate %></td>
+    <td><%= task.estimatedCompletionDate.strftime("%m.%d.%Y") %></td>
 <!--
     <td><%= link_to 'Destroy', task, :confirm => 'Are you sure?', :method => :delete %></td>
 -->
