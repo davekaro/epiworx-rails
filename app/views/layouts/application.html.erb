@@ -34,7 +34,19 @@
                       <%= yield %>
                   </td>
                   <td id="sidebar">
-                      yield a sidebar?
+    				<div class="part">
+				        <h4>
+				            Things To Do</h4>
+				        <ul>
+				            <li class="first">
+				                <a href="/Hour/Create">Add a New Hour</a></li>
+				            <li>
+				                <%= link_to "Add a New Task", new_task_path %></li>
+				            <li class="last">
+				                <%= link_to "Add a New Project", new_project_path %></li>
+				        </ul>
+				    </div>
+
                   </td>
               </tr>
           </table>
