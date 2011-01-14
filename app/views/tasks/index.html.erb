@@ -1,37 +1,43 @@
-<h1>Listing tasks</h1>
 
-<table>
-  <tr>
-    <th>Description</th>
-    <th>Project</th>
-    <th>Status</th>
-    <th>Category</th>
-    <th>Assignedto</th>
-    <th>Estimatedduration</th>
-    <th>Estimatedcompletiondate</th>
-    <th>Tags</th>
-    <th>Notes</th>
-    <th>Isarchived</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="part">
+        <h2>
+            My<span>Tasks</span></h2>
 
+<table class="list">
+    <thead>
+        <tr>
+            <th>
+                No.
+            </th>
+            <th>
+                
+            </th>
+             <th style="width: 200px;">
+                Project
+            </th>
+            <th>
+                Description
+            </th>
+            <th style="width: 100px;">
+                User
+            </th>
+            <th style="width: 100px;">
+                Due
+            </th>
+        </tr>
+    </thead>
+	<tbody>
 <% @tasks.each do |task| %>
   <tr>
+    <td><%= link_to task.id, edit_task_path(task) %></td>
+    <td><div class="box" style="color: #FFFFFF; background-color: #4FA72A;"><%= task.status %></div></td>
+    <td><%= task.project.name %></td>
     <td><%= task.description %></td>
-    <td><%= task.project %></td>
-    <td><%= task.status %></td>
-    <td><%= task.category %></td>
     <td><%= task.assignedTo %></td>
-    <td><%= task.estimatedDuration %></td>
     <td><%= task.estimatedCompletionDate %></td>
-    <td><%= task.tags %></td>
-    <td><%= task.notes %></td>
-    <td><%= task.isArchived %></td>
-    <td><%= link_to 'Show', task %></td>
-    <td><%= link_to 'Edit', edit_task_path(task) %></td>
+<!--
     <td><%= link_to 'Destroy', task, :confirm => 'Are you sure?', :method => :delete %></td>
+-->
   </tr>
 <% end %>
 </table>
