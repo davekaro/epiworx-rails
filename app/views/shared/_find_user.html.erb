@@ -1,16 +1,16 @@
 <div id="find">
-    <input type="text" id="FindText" value="get from request string" /><%= image_tag "find.png", :id => "FindButton" %>
+  <input type="text" id="FindText" value="get from request string" /><%= image_tag "find.png", :id => "FindButton" %>
 </div>
 <script type="text/javascript">
     $('#FindButton').click(function () {
-       find();
+        find();
     });
  
     $('#FindText').keypress(function(event) { 
-	    var keycode = (event.keyCode ? event.keyCode : event.which);
-	    if(keycode == '13'){
-		    find();
-	    }
+      var keycode = (event.keyCode ? event.keyCode : event.which);
+      if(keycode == '13'){
+        find();
+      }
     });
 
     function find() {
