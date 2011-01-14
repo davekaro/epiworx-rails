@@ -1,0 +1,57 @@
+<%= form_for(@task) do |f| %>
+  <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+      <% @task.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :project %><br />
+    <%= f.text_field :project %>
+  </div>
+  <div class="field">
+    <%= f.label :description, 'Describe the work that needs to be performed' %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br />
+    <%= f.text_area :category %>
+  </div>
+  <div class="field">
+    <%= f.label :assignedTo %><br />
+    <%= f.text_area :assignedTo %>
+  </div>
+  <div class="field">
+    <%= f.label :estimatedDuration %><br />
+    <%= f.text_field :estimatedDuration %>
+  </div>
+  <div class="field">
+    <%= f.label :estimatedCompletionDate %><br />
+    <%= f.date_select :estimatedCompletionDate %>
+  </div>
+  <div class="field">
+    <%= f.label :tags %><br />
+    <%= f.text_area :tags %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :isArchived %><br />
+    <%= f.check_box :isArchived %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

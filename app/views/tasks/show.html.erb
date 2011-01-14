@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Description:</b>
+  <%= @task.description %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @task.project %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @task.status %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @task.category %>
+</p>
+
+<p>
+  <b>Assignedto:</b>
+  <%= @task.assignedTo %>
+</p>
+
+<p>
+  <b>Estimatedduration:</b>
+  <%= @task.estimatedDuration %>
+</p>
+
+<p>
+  <b>Estimatedcompletiondate:</b>
+  <%= @task.estimatedCompletionDate %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%= @task.tags %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @task.notes %>
+</p>
+
+<p>
+  <b>Isarchived:</b>
+  <%= @task.isArchived %>
+</p>
+
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>

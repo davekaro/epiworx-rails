@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  description: MyString
+  project: 
+  status: MyText
+  category: MyText
+  assignedTo: MyText
+  estimatedDuration: 
+  estimatedCompletionDate: 2011-01-12
+  tags: MyText
+  notes: MyText
+  isArchived: false
+
+two:
+  description: MyString
+  project: 
+  status: MyText
+  category: MyText
+  assignedTo: MyText
+  estimatedDuration: 
+  estimatedCompletionDate: 2011-01-12
+  tags: MyText
+  notes: MyText
+  isArchived: false
