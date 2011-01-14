@@ -11,14 +11,72 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :project %><br />
-	<%= f.collection_select(:project_id, Project.all, :id, :name, :prompt => true) %>
-  </div>
-  <div class="field">
-    <%= f.label :description, 'Describe the work that needs to be performed' %><br />
-    <%= f.text_area :description %>
-  </div>
+<fieldset>
+    <p class="span1">
+        <%= f.label :project %>
+		<%= f.collection_select(:project_id, Project.all, :id, :name, :prompt => true) %>
+    </p>
+    <p class="span1">
+        <label for="StatusId">Status:</label>
+        <select id="status" name="status"><option value="0">Select a status...</option><option value="4">Complete</option><option value="5" selected="selected">Done</option><option value="3">In Progress</option><option value="1">Pending</option><option value="2">Ready</option></select>
+
+    </p>
+    <p class="span1 last">
+        <label for="category">Category:</label>
+        <select id="category" name="category"><option value="0">Select a category...</option><option value="2">Bug</option><option value="1" selected="selected">Enhancement</option><option value="3">Task</option></select>
+
+    </p>
+    <div class="clear">
+    </div>
+    <p class="span3">
+        <%= f.label :description, 'Describe the work that needs to be performed' %>
+		<%= f.text_area :description, :cols => 20, :rows => 2 %>
+    </p>
+    <div class="clear">
+    </div>
+    <p class="span1">
+		<%= f.label :assignedTo %>
+	    <%= f.text_field :assignedTo %>
+    </p>
+    <p class="span1">
+        <%= f.label "Estimated Duration" %>
+        <%= f.text_field :estimatedDuration, :class => "number"%>
+    </p>
+    <p class="span1 last">
+        <%= f.label "Estimated Completed Date"%>
+        <%= f.text_field :estimatedCompletionDate, :class => "date"%>
+    </p>
+    <div class="clear">
+    </div>
+    <p class="span3">
+		<%= f.label "Add tags to the task" %>
+	    <%= f.text_field :tags %>
+    </p>
+    <div class="clear">
+    </div>
+    <p class="span3">
+        <%= f.label "Enter some notes that provide more detail about the task:" %>
+		<%= f.text_area :notes, :cols => 20, :rows => 2 %>
+    </p>
+    <div class="clear">
+    </div>
+    <p class="span3 checkbox">
+		<%= f.check_box :isArchived %>
+		<%= f.label "This task is archived" %>
+    </p>
+</fieldset>
+
+<div class="commands">
+    <ul>
+        <li>
+			 <%= f.submit %>
+		</li>
+        <li>
+            Delete
+        </li>
+    </ul>
+</div>
+<!--
   <div class="field">
     <%= f.label :status %><br />
     <%= f.text_field :status %>
@@ -40,7 +98,7 @@
     <%= f.date_select :estimatedCompletionDate %>
   </div>
   <div class="field">
-    <%= f.label :tags %><br />
+    <%= f.label "Add tags to the task" %><br />
     <%= f.text_area :tags %>
   </div>
   <div class="field">
@@ -54,4 +112,7 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+-->
 <% end %>
+
+  
