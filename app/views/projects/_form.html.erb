@@ -11,34 +11,37 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :active %><br />
-    <%= f.check_box :active %>
-  </div>
-  <div class="field">
-    <%= f.label :archived %><br />
-    <%= f.check_box :archived %>
-  </div>
-  <div class="field">
-    <%= f.label :notes %><br />
-    <%= f.text_field :notes %>
-  </div>
-  <div class="field">
-    <%= f.label :modified_by %><br />
-    <%= f.text_field :modified_by %>
-  </div>
-  <div class="field">
-    <%= f.label :created_by %><br />
-    <%= f.text_field :created_by %>
-  </div>
+<fieldset>
+    <p class="span3">
+        <%= f.label :name %>
+		<%= f.text_field :name, :class => "big" %>
+        <span class="tip">This is the name of the project, this name must be unique, e.g. PM.</span>
+    </p>
+    <div class="clear">
+    </div>
+	<p class="span3">
+	        <%= f.label "Enter a description for the project" %>
+	        <%= f.text_area :description, :cols=>20, :rows=>2 %>
+	    </p>
+	    <div class="clear">
+	    </div>
+	    <p class="span3 checkbox">
+			<%= f.check_box :active %>
+	        <%= f.label "This project is active" %>
+	    </p>
+	    <div class="clear">
+	    </div>
+	    <p class="span3 checkbox">
+	        <%= f.check_box :archived %>
+	        <%= f.label "This project is archived" %>
+	    </p>
+	    <div class="clear">
+	    </div>
+	    <p class="span3">
+	        <%= f.label "Enter some notes about the project:" %>
+			<%= f.text_area :notes, :cols=>20, :rows=>2 %>
+	    </p>
+	</fieldset>
   <div class="actions">
     <%= f.submit %>
   </div>
