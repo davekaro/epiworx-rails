@@ -1,0 +1,24 @@
+<div id="find">
+    <input type="text" id="FindText" value="get from request string" /><%= image_tag "find.png", :id => "FindButton" %>
+</div>
+<script type="text/javascript">
+    $('#FindButton').click(function () {
+       find();
+    });
+ 
+    $('#FindText').keypress(function(event) { 
+	    var keycode = (event.keyCode ? event.keyCode : event.which);
+	    if(keycode == '13'){
+		    find();
+	    }
+    });
+
+    function find() {
+        var url = "task_index_path";
+        var value = $("#FindText").val();
+        if (value != "") {
+            url = url + "?text=" + value;
+            location.href = url;
+        }
+    }
+</script>

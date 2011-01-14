@@ -1,0 +1,12 @@
+<%# if this.Request.IsAuthenticated) %>
+<div id="navigation">
+        <%= render "shared/find_user" %>
+    <ul>
+        <li class="selected"><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Tasks", root_path %></li>
+        <li><%= link_to "Projects", root_path %></li>
+        <li><%= link_to "Hours", root_path %></li>
+        <li><%= link_to "Users", root_path %></li>
+    </ul>
+</div>
+<%# end %>
