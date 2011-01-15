@@ -18,11 +18,15 @@
       </div>
       
       <div class="pretty-box"></div>
-      ProfileUserControl partial
-      MenuUserControl partial
+      
+      <%= render "shared/user_login" %>
+      <%= render "shared/user_menu" %>
     </div>
     
     <%= render "shared/navigation" %>
+    
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     
     <div id="main">
       <div class="pretty-box"></div>

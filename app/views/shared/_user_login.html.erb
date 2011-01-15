@@ -1,0 +1,8 @@
+<div id="profile">
+	<% if user_signed_in? %>
+		<%= image_tag avatar_url(current_user) %>
+		<span><%= current_user.email %>&nbsp;<% current_user.email %></span>
+	<% else %>
+	  <%= image_tag "profile.png", :alt => "No Profile" %>
+	<% end %>
+</div>

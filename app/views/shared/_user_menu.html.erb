@@ -1,0 +1,13 @@
+<div id="menu">
+	<ul>
+		<% if user_signed_in? %>
+			<li><%= link_to "Sign out", destroy_user_session_path %></li>
+      <li class="separator">|</li>
+      <li><a href="#">Settings</a></li>
+		<% else %>
+		  <li><%= link_to "sign in", new_user_session_path %></li>
+      <li class="separator">|</li>
+      <li><%= link_to "Register", new_user_registration_path %></li>
+		<% end %>
+	</ul>
+</div>
